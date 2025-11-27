@@ -1,0 +1,212 @@
+* { 
+  box-sizing: border-box; 
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
+  font-size: 16px; 
+} 
+body, html { 
+  margin: 0; 
+  padding: 0; 
+  background-color: #f3f4f7; 
+} 
+.invoices, .invoice, .create-invoice { 
+  box-shadow: 0px 0px 7px 1px rgba(45, 54, 68, 0.05); 
+  border-radius: 5px; 
+  background-color: #fff; 
+  margin: 60px auto; 
+  max-width: 600px; 
+  width: 100%; 
+} 
+.invoices .header, .invoice .header, .create-invoice .header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 30px 40px 0; 
+} 
+.invoices .header h1, .invoice .header h1, .create-invoice .header h1 { 
+  color: #4a5361; 
+  font-size: 26px; 
+  font-weight: 500; 
+  padding: 0; 
+  margin: 0; 
+} 
+.invoices .content, .invoice .content, .create-invoice .content { 
+  padding: 30px 40px 40px; 
+} 
+.invoices .content .invoices-table, .invoices .content .invoice-items-table, .invoice .content .invoices-table, .invoice .content .invoice-items-table, .create-invoice .content .invoices-table, .create-invoice .content .invoice-items-table { 
+  width: 100%; 
+  border-collapse: collapse; 
+} 
+.invoices .content .invoices-table thead, .invoices .content .invoice-items-table thead, .invoice .content .invoices-table thead, .invoice .content .invoice-items-table thead, .create-invoice .content .invoices-table thead, .create-invoice .content .invoice-items-table thead { 
+  border-bottom: 1px solid #f1f2f4; 
+} 
+.invoices .content .invoices-table thead th, .invoices .content .invoice-items-table thead th, .invoice .content .invoices-table thead th, .invoice .content .invoice-items-table thead th, .create-invoice .content .invoices-table thead th, .create-invoice .content .invoice-items-table thead th { 
+  color: #5d6779; 
+  font-size: 14px; 
+  font-weight: 500; 
+  padding: 15px 15px 15px 0; 
+  text-align: left; 
+} 
+.invoices .content .invoices-table thead th.pull-right, .invoices .content .invoice-items-table thead th.pull-right, .invoice .content .invoices-table thead th.pull-right, .invoice .content .invoice-items-table thead th.pull-right, .create-invoice .content .invoices-table thead th.pull-right, .create-invoice .content .invoice-items-table thead th.pull-right { 
+  text-align: right; 
+} 
+.invoices .content .invoices-table tbody tr, .invoices .content .invoice-items-table tbody tr, .invoice .content .invoices-table tbody tr, .invoice .content .invoice-items-table tbody tr, .create-invoice .content .invoices-table tbody tr, .create-invoice .content .invoice-items-table tbody tr { 
+  border-bottom: 1px solid #f1f2f4; 
+} 
+.invoices .content .invoices-table tbody tr td, .invoices .content .invoice-items-table tbody tr td, .invoice .content .invoices-table tbody tr td, .invoice .content .invoice-items-table tbody tr td, .create-invoice .content .invoices-table tbody tr td, .create-invoice .content .invoice-items-table tbody tr td { 
+  padding: 15px 15px 15px 0; 
+  font-size: 14px; 
+  color: #5d6779; 
+} 
+.invoices .content .invoices-table tbody tr td .action, .invoices .content .invoice-items-table tbody tr td .action, .invoice .content .invoices-table tbody tr td .action, .invoice .content .invoice-items-table tbody tr td .action, .create-invoice .content .invoices-table tbody tr td .action, .create-invoice .content .invoice-items-table tbody tr td .action { 
+  color: #0e75d6; 
+  font-weight: 500; 
+  font-size: 14px; 
+  text-decoration: none; 
+} 
+.invoices .content .invoices-table tbody tr td .action:hover, .invoices .content .invoice-items-table tbody tr td .action:hover, .invoice .content .invoices-table tbody tr td .action:hover, .invoice .content .invoice-items-table tbody tr td .action:hover, .create-invoice .content .invoices-table tbody tr td .action:hover, .create-invoice .content .invoice-items-table tbody tr td .action:hover { 
+  text-decoration: underline; 
+} 
+.invoices .content .invoices-table tbody tr td .green, .invoices .content .invoices-table tbody tr td .red, .invoices .content .invoice-items-table tbody tr td .green, .invoices .content .invoice-items-table tbody tr td .red, .invoice .content .invoices-table tbody tr td .green, .invoice .content .invoices-table tbody tr td .red, .invoice .content .invoice-items-table tbody tr td .green, .invoice .content .invoice-items-table tbody tr td .red, .create-invoice .content .invoices-table tbody tr td .green, .create-invoice .content .invoices-table tbody tr td .red, .create-invoice .content .invoice-items-table tbody tr td .green, .create-invoice .content .invoice-items-table tbody tr td .red { 
+  display: inline-flex; 
+  font-weight: 600; 
+  font-size: 12px; 
+  padding: 3px 10px; 
+  border-radius: 15px; 
+  text-transform: capitalize; 
+  white-space: nowrap; 
+  background-color: #e8ebec; 
+  color: #8e9499; 
+} 
+.create-invoice { 
+  max-width: 500px; 
+} 
+.create-invoice .content { 
+  display: flex; 
+  flex-flow: column; 
+} 
+.create-invoice .content .invoice-items { 
+  padding-bottom: 15px; 
+} 
+.create-invoice .content .invoice-items .add-item { 
+  display: inline-flex; 
+  align-items: center; 
+  text-decoration: none; 
+  font-weight: 500; 
+  color: #2579da; 
+  font-size: 14px; 
+  margin-bottom: 5px; 
+} 
+.create-invoice .content .invoice-items .add-item svg { 
+  fill: #2579da; 
+  margin-right: 3px; 
+} 
+.create-invoice .content .invoice-items .add-item:hover { 
+  color: #1e61ae; 
+} 
+.create-invoice .content .invoice-items .add-item:hover svg { 
+  fill: #1e61ae; 
+} 
+.create-invoice .content label { 
+  font-size: 14px; 
+  font-weight: 500; 
+  color: #5d6779; 
+  margin: 0 0 10px 0; 
+  padding: 0; 
+} 
+.create-invoice .content input, .create-invoice .content textarea { 
+  border: 1px solid #e2e4e9; 
+  border-radius: 5px; 
+  padding: 10px; 
+  font-size: 14px; 
+  color: #5d6779; 
+  margin: 0 0 15px 0; 
+  width: 100%; 
+} 
+.create-invoice .content input:focus, .create-invoice .content textarea:focus { 
+  border-color: #0e75d6; 
+} 
+.create-invoice .content input::placeholder, .create-invoice .content textarea::placeholder { 
+  color: #a0a8b6; 
+} 
+.create-invoice .content textarea { 
+  min-height: 100px; 
+} 
+.create-invoice .content button { 
+  margin-top: 10px; 
+  align-self: flex-start; 
+} 
+.invoice { 
+  max-width: 500px; 
+} 
+.invoice .header { 
+  padding-bottom: 30px; 
+  border-bottom: 1px solid #f1f2f4; 
+} 
+.invoice .header .due-date { 
+  font-size: 14px; 
+  font-weight: 500; 
+  color: #9fa4b1; 
+  margin: 10px 0 0 0; 
+  padding: 0; 
+} 
+.invoice .header .paid { 
+  font-size: 20px; 
+  font-weight: 500; 
+  color: #1bce6e; 
+  margin: 10px 0 0 0; 
+  padding: 0; 
+} 
+.invoice .content { 
+  display: flex; 
+  flex-flow: wrap; 
+} 
+.invoice .content .from-details, .invoice .content .to-details { 
+  width: 50%; 
+  padding: 10px 20px 20px 0; 
+} 
+.invoice .content .from-details h3, .invoice .content .to-details h3 { 
+  font-size: 14px; 
+  font-weight: 600; 
+  color: #9fa4b1; 
+  margin: 0 0 10px 0; 
+  padding: 0; 
+} 
+.invoice .content .from-details p, .invoice .content .to-details p { 
+  font-size: 14px; 
+  color: #5d6779; 
+  margin: 0 0 5px 0; 
+  padding: 0; 
+} 
+.invoice .content .invoice-items { 
+  width: 100%; 
+  flex: 1; 
+} 
+.btn { 
+  text-decoration: none; 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  appearance: none; 
+  background: #0e75d6; 
+  box-shadow: 0px 0px 7px 1px rgba(45, 54, 68, 0.12); 
+  border: 0; 
+  border-radius: 4px; 
+  color: #FFFFFF; 
+  height: 36px; 
+  padding: 0 14px; 
+  font-size: 14px; 
+  line-height: 16px; 
+  font-weight: 500; 
+  cursor: pointer; 
+  margin-top: 5px; 
+} 
+.btn:hover { 
+  background: #0c68be; 
+} 
+.btn svg { 
+  margin-right: 6px; 
+  fill: #b7d6f3; 
+} 
+.btn:has(svg) { 
+  padding-left: 10px; 
+}
